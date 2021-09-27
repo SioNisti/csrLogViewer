@@ -29,57 +29,105 @@ namespace csrLogViewer
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.whereis = new System.Windows.Forms.Button();
+            this.whatis = new System.Windows.Forms.Button();
+            this.isxy = new System.Windows.Forms.Button();
+            this.dirbtn = new System.Windows.Forms.Button();
+            this.logpath = new System.Windows.Forms.TextBox();
+            this.seed = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
-            // button1
+            // whereis
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Where is item X?";
-            this.button1.UseVisualStyleBackColor = true;
+            this.whereis.Location = new System.Drawing.Point(12, 51);
+            this.whereis.Name = "whereis";
+            this.whereis.Size = new System.Drawing.Size(116, 23);
+            this.whereis.TabIndex = 0;
+            this.whereis.Text = "Where is item X?";
+            this.whereis.UseVisualStyleBackColor = true;
+            this.whereis.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // whatis
             // 
-            this.button2.Location = new System.Drawing.Point(134, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "What is Check X?";
-            this.button2.UseVisualStyleBackColor = true;
+            this.whatis.Location = new System.Drawing.Point(134, 51);
+            this.whatis.Name = "whatis";
+            this.whatis.Size = new System.Drawing.Size(116, 23);
+            this.whatis.TabIndex = 1;
+            this.whatis.Text = "What is Check X?";
+            this.whatis.UseVisualStyleBackColor = true;
+            this.whatis.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // isxy
             // 
-            this.button3.Location = new System.Drawing.Point(256, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Is Check X Item Y?";
-            this.button3.UseVisualStyleBackColor = true;
+            this.isxy.Location = new System.Drawing.Point(256, 51);
+            this.isxy.Name = "isxy";
+            this.isxy.Size = new System.Drawing.Size(116, 23);
+            this.isxy.TabIndex = 2;
+            this.isxy.Text = "Is Check X Item Y?";
+            this.isxy.UseVisualStyleBackColor = true;
+            this.isxy.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // dirbtn
+            // 
+            this.dirbtn.Location = new System.Drawing.Point(12, 25);
+            this.dirbtn.Name = "dirbtn";
+            this.dirbtn.Size = new System.Drawing.Size(75, 20);
+            this.dirbtn.TabIndex = 3;
+            this.dirbtn.Text = "Log path";
+            this.dirbtn.UseVisualStyleBackColor = true;
+            this.dirbtn.Click += new System.EventHandler(this.dirbtn_Click);
+            // 
+            // logpath
+            // 
+            this.logpath.Location = new System.Drawing.Point(93, 25);
+            this.logpath.Name = "logpath";
+            this.logpath.Size = new System.Drawing.Size(279, 20);
+            this.logpath.TabIndex = 4;
+            this.logpath.KeyUp += new System.Windows.Forms.KeyEventHandler(this.logpath_KeyUp);
+            // 
+            // seed
+            // 
+            this.seed.AutoSize = true;
+            this.seed.Location = new System.Drawing.Point(85, 9);
+            this.seed.Name = "seed";
+            this.seed.Size = new System.Drawing.Size(0, 13);
+            this.seed.TabIndex = 5;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 49);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(384, 86);
+            this.Controls.Add(this.seed);
+            this.Controls.Add(this.logpath);
+            this.Controls.Add(this.dirbtn);
+            this.Controls.Add(this.isxy);
+            this.Controls.Add(this.whatis);
+            this.Controls.Add(this.whereis);
             this.Name = "start";
-            this.Text = "Form1";
+            this.Text = "csLogViewer";
+            this.Load += new System.EventHandler(this.start_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button whereis;
+        private System.Windows.Forms.Button whatis;
+        private System.Windows.Forms.Button isxy;
+        private System.Windows.Forms.Button dirbtn;
+        private System.Windows.Forms.TextBox logpath;
+        private System.Windows.Forms.Label seed;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }
 
