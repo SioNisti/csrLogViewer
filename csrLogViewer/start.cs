@@ -12,7 +12,7 @@ namespace csrLogViewer
         public start()
         {
             InitializeComponent();
-        }
+        } 
 
         public static string path2log = "";
         public static string logseed = "";
