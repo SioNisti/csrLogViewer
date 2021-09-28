@@ -115,7 +115,7 @@ namespace csrLogViewer
             // itemlocation
             // 
             this.itemlocation.AutoSize = true;
-            this.itemlocation.Location = new System.Drawing.Point(12, 35);
+            this.itemlocation.Location = new System.Drawing.Point(5, 35);
             this.itemlocation.Name = "itemlocation";
             this.itemlocation.Size = new System.Drawing.Size(67, 13);
             this.itemlocation.TabIndex = 2;

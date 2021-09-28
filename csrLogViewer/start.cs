@@ -83,6 +83,8 @@ namespace csrLogViewer
 
                 logseed = seeds.Substring(sFrom, sTo - sFrom);
 
+                path2log = logpath.Text;
+
                 seed.Text = "Seed: " + logseed;
 
                 whereis.Enabled = true;

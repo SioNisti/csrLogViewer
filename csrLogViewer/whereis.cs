@@ -22,115 +22,7 @@ namespace csrLogViewer
             Debug.WriteLine(start.path2log + "\n----------------------------------------");
             switch (liofit.Text)
             {
-                case "Arthur's Key":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Santa's Key":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Rusty Key":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Gum Key":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Clinic Key":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Teleporter Room Key":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Silver Locket":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "ID Card":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Jellyfish Juice":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Gum Base":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Charcoal":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Bomb":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Hajime":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Kakeru":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Mick":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Nene":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Shinobu":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Life Pot":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Sue's Letter":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Controller":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Broken Sprinkler":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Sprinkler":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Cure-All":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Tow Rope":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Mushroom Badge":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Ma Pignon":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Iron Bond":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Nikumaru Counter":
+                default:
                     itemlocation.Text = Find(": " + liofit.Text, 0);
                     break;
 
@@ -140,50 +32,6 @@ namespace csrLogViewer
 
                 case "Booster (Progressive 2)":
                     itemlocation.Text = Find(": Booster", 1);
-                    break;
-
-                case "Mimiga Mask":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Curly's Air Tank":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Turbocharge":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Arms Barrier":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Whimsical Star":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Map System":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Alien Medal":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Clay Figure Medal":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Chaco's Lipstick":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Curly's Panties":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Little Man":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
                     break;
 
                 case "Polar Star (Progressive 1)":
@@ -212,38 +60,6 @@ namespace csrLogViewer
 
                 case "Missile Expansion 4":
                     itemlocation.Text = Find(": Missile Expansion", 3);
-                    break;
-
-                case "Super Missile Launcher":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Missile Expansion (Super Missile alt)":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Machine Gun":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Bubbler":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Fireball":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Snake":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Blade":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
-                    break;
-
-                case "Nemesis":
-                    itemlocation.Text = Find(": " + liofit.Text, 0);
                     break;
 
                 case "Life Capsule 1":
