@@ -122,6 +122,7 @@ namespace csrLogViewer
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "start";
             this.Text = "csrLogViewer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.start_FormClosing);
             this.Load += new System.EventHandler(this.start_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.start_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.start_DragEnter);

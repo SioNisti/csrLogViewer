@@ -96,9 +96,12 @@ namespace csrLogViewer
 
         private void start_Load(object sender, EventArgs e)
         {
-            string dragtoexe = Environment.GetCommandLineArgs()[1];
-            if (dragtoexe != null)
-                kiisseli(dragtoexe);
+            if (Environment.GetCommandLineArgs().Length > 1)
+            {
+                string dragtoexe = Environment.GetCommandLineArgs()[1];
+                if (dragtoexe != null)
+                    kiisseli(dragtoexe);
+            }
 
             if (path2log.Length > 0)
             {
@@ -126,6 +129,12 @@ namespace csrLogViewer
             {
                 e.Effect = DragDropEffects.None;
             }
+        }
+
+        private void start_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Process[] processes = Process.GetProcessesByName("csrLogViewer");
+            processes[0].Kill();
         }
     }
 }
