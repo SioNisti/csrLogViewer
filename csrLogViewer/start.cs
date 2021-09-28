@@ -3,6 +3,7 @@ using Microsoft.WindowsAPICodePack.Dialogs;
 using System.Windows.Forms;
 using Directory = System.IO.Directory;
 using System.IO;
+using System.Diagnostics;
 
 namespace csrLogViewer
 {
@@ -95,6 +96,10 @@ namespace csrLogViewer
 
         private void start_Load(object sender, EventArgs e)
         {
+            string dragtoexe = Environment.GetCommandLineArgs()[1];
+            if (dragtoexe != null)
+                kiisseli(dragtoexe);
+
             if (path2log.Length > 0)
             {
                 logpath.Text = path2log;

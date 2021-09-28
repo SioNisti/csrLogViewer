@@ -140,6 +140,7 @@ namespace csrLogViewer
             this.Controls.Add(this.wherebtn);
             this.Controls.Add(this.itemlocation);
             this.Controls.Add(this.liofit);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "whereis";
