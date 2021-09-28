@@ -17,3 +17,7 @@ Allows you to easily check what item is where or just check if item X is in chec
 -See what check is what item
 
 -See if check has a specific item
+
+-Shows rando seed
+
+-Shows rando settings
