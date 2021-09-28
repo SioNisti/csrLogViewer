@@ -29,18 +29,19 @@ namespace csrLogViewer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(start));
             this.whereis = new System.Windows.Forms.Button();
             this.whatis = new System.Windows.Forms.Button();
             this.isxy = new System.Windows.Forms.Button();
             this.dirbtn = new System.Windows.Forms.Button();
             this.logpath = new System.Windows.Forms.TextBox();
-            this.seed = new System.Windows.Forms.Label();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.seedsettings = new System.Windows.Forms.Label();
+            this.seedseed = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // whereis
             // 
-            this.whereis.Location = new System.Drawing.Point(12, 51);
+            this.whereis.Location = new System.Drawing.Point(12, 73);
             this.whereis.Name = "whereis";
             this.whereis.Size = new System.Drawing.Size(116, 23);
             this.whereis.TabIndex = 0;
@@ -50,7 +51,7 @@ namespace csrLogViewer
             // 
             // whatis
             // 
-            this.whatis.Location = new System.Drawing.Point(134, 51);
+            this.whatis.Location = new System.Drawing.Point(134, 73);
             this.whatis.Name = "whatis";
             this.whatis.Size = new System.Drawing.Size(116, 23);
             this.whatis.TabIndex = 1;
@@ -60,7 +61,7 @@ namespace csrLogViewer
             // 
             // isxy
             // 
-            this.isxy.Location = new System.Drawing.Point(256, 51);
+            this.isxy.Location = new System.Drawing.Point(256, 73);
             this.isxy.Name = "isxy";
             this.isxy.Size = new System.Drawing.Size(116, 23);
             this.isxy.TabIndex = 2;
@@ -70,7 +71,7 @@ namespace csrLogViewer
             // 
             // dirbtn
             // 
-            this.dirbtn.Location = new System.Drawing.Point(12, 25);
+            this.dirbtn.Location = new System.Drawing.Point(12, 47);
             this.dirbtn.Name = "dirbtn";
             this.dirbtn.Size = new System.Drawing.Size(75, 20);
             this.dirbtn.TabIndex = 3;
@@ -80,34 +81,46 @@ namespace csrLogViewer
             // 
             // logpath
             // 
-            this.logpath.Location = new System.Drawing.Point(93, 25);
+            this.logpath.Location = new System.Drawing.Point(93, 47);
             this.logpath.Name = "logpath";
             this.logpath.Size = new System.Drawing.Size(279, 20);
             this.logpath.TabIndex = 4;
             this.logpath.KeyUp += new System.Windows.Forms.KeyEventHandler(this.logpath_KeyUp);
             // 
-            // seed
+            // seedsettings
             // 
-            this.seed.AutoSize = true;
-            this.seed.Location = new System.Drawing.Point(85, 9);
-            this.seed.Name = "seed";
-            this.seed.Size = new System.Drawing.Size(0, 13);
-            this.seed.TabIndex = 5;
+            this.seedsettings.AutoSize = true;
+            this.seedsettings.Location = new System.Drawing.Point(12, 9);
+            this.seedsettings.Name = "seedsettings";
+            this.seedsettings.Size = new System.Drawing.Size(51, 13);
+            this.seedsettings.TabIndex = 6;
+            this.seedsettings.Text = "Settings: ";
+            // 
+            // seedseed
+            // 
+            this.seedseed.AutoSize = true;
+            this.seedseed.Location = new System.Drawing.Point(12, 28);
+            this.seedseed.Name = "seedseed";
+            this.seedseed.Size = new System.Drawing.Size(35, 13);
+            this.seedseed.TabIndex = 7;
+            this.seedseed.Text = "Seed:";
             // 
             // start
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 86);
-            this.Controls.Add(this.seed);
+            this.ClientSize = new System.Drawing.Size(384, 107);
+            this.Controls.Add(this.seedseed);
+            this.Controls.Add(this.seedsettings);
             this.Controls.Add(this.logpath);
             this.Controls.Add(this.dirbtn);
             this.Controls.Add(this.isxy);
             this.Controls.Add(this.whatis);
             this.Controls.Add(this.whereis);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "start";
-            this.Text = "csLogViewer";
+            this.Text = "csrLogViewer";
             this.Load += new System.EventHandler(this.start_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.start_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.start_DragEnter);
@@ -123,8 +136,8 @@ namespace csrLogViewer
         private System.Windows.Forms.Button isxy;
         private System.Windows.Forms.Button dirbtn;
         private System.Windows.Forms.TextBox logpath;
-        private System.Windows.Forms.Label seed;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Label seedsettings;
+        private System.Windows.Forms.Label seedseed;
     }
 }
 

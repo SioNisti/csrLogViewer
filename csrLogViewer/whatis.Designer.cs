@@ -29,6 +29,7 @@ namespace csrLogViewer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(whatis));
             this.whatbtn = new System.Windows.Forms.Button();
             this.itemlocation = new System.Windows.Forms.Label();
             this.lioflo = new System.Windows.Forms.ComboBox();
@@ -36,7 +37,7 @@ namespace csrLogViewer
             // 
             // whatbtn
             // 
-            this.whatbtn.Location = new System.Drawing.Point(12, 11);
+            this.whatbtn.Location = new System.Drawing.Point(12, 12);
             this.whatbtn.Name = "whatbtn";
             this.whatbtn.Size = new System.Drawing.Size(75, 21);
             this.whatbtn.TabIndex = 6;
@@ -142,7 +143,7 @@ namespace csrLogViewer
             "",
             "Hell B1 Spot",
             "Hell B3 Chest"});
-            this.lioflo.Location = new System.Drawing.Point(93, 11);
+            this.lioflo.Location = new System.Drawing.Point(93, 12);
             this.lioflo.Name = "lioflo";
             this.lioflo.Size = new System.Drawing.Size(186, 21);
             this.lioflo.TabIndex = 4;
@@ -155,8 +156,9 @@ namespace csrLogViewer
             this.Controls.Add(this.whatbtn);
             this.Controls.Add(this.itemlocation);
             this.Controls.Add(this.lioflo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "whatis";
-            this.Text = "whatis";
+            this.Text = "csrLogViewer: What is?";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.whatis_FormClosing);
             this.Load += new System.EventHandler(this.whatis_Load);
             this.ResumeLayout(false);

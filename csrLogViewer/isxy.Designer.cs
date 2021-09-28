@@ -29,6 +29,7 @@ namespace csrLogViewer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(isxy));
             this.lioflo = new System.Windows.Forms.ComboBox();
             this.liofit = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -124,9 +125,9 @@ namespace csrLogViewer
             "",
             "Hell B1 Spot",
             "Hell B3 Chest"});
-            this.lioflo.Location = new System.Drawing.Point(93, 12);
+            this.lioflo.Location = new System.Drawing.Point(12, 12);
             this.lioflo.Name = "lioflo";
-            this.lioflo.Size = new System.Drawing.Size(121, 21);
+            this.lioflo.Size = new System.Drawing.Size(153, 21);
             this.lioflo.TabIndex = 0;
             // 
             // liofit
@@ -186,15 +187,15 @@ namespace csrLogViewer
             "Blade",
             "Nemesis",
             "Life Capsule"});
-            this.liofit.Location = new System.Drawing.Point(220, 12);
+            this.liofit.Location = new System.Drawing.Point(171, 12);
             this.liofit.Name = "liofit";
-            this.liofit.Size = new System.Drawing.Size(121, 21);
+            this.liofit.Size = new System.Drawing.Size(153, 21);
             this.liofit.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(144, 41);
+            this.label1.Location = new System.Drawing.Point(93, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 2;
@@ -202,11 +203,11 @@ namespace csrLogViewer
             // 
             // isbtn
             // 
-            this.isbtn.Location = new System.Drawing.Point(12, 12);
+            this.isbtn.Location = new System.Drawing.Point(12, 39);
             this.isbtn.Name = "isbtn";
-            this.isbtn.Size = new System.Drawing.Size(75, 23);
+            this.isbtn.Size = new System.Drawing.Size(75, 21);
             this.isbtn.TabIndex = 3;
-            this.isbtn.Text = "Is X Y";
+            this.isbtn.Text = "Is X Y?";
             this.isbtn.UseVisualStyleBackColor = true;
             this.isbtn.Click += new System.EventHandler(this.isbtn_Click);
             // 
@@ -214,13 +215,15 @@ namespace csrLogViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 63);
+            this.ClientSize = new System.Drawing.Size(336, 71);
             this.Controls.Add(this.isbtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.liofit);
             this.Controls.Add(this.lioflo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "isxy";
-            this.Text = "isxy";
+            this.Text = "csrLogViewer: Is X Y?";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.isxy_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

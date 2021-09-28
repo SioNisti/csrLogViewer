@@ -29,6 +29,7 @@ namespace csrLogViewer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(whereis));
             this.liofit = new System.Windows.Forms.ComboBox();
             this.itemlocation = new System.Windows.Forms.Label();
             this.wherebtn = new System.Windows.Forms.Button();
@@ -107,7 +108,7 @@ namespace csrLogViewer
             "Life Capsule 10",
             "Life Capsule 11",
             "Life Capsule 12"});
-            this.liofit.Location = new System.Drawing.Point(93, 13);
+            this.liofit.Location = new System.Drawing.Point(93, 12);
             this.liofit.Name = "liofit";
             this.liofit.Size = new System.Drawing.Size(186, 21);
             this.liofit.TabIndex = 0;
@@ -115,7 +116,7 @@ namespace csrLogViewer
             // itemlocation
             // 
             this.itemlocation.AutoSize = true;
-            this.itemlocation.Location = new System.Drawing.Point(5, 35);
+            this.itemlocation.Location = new System.Drawing.Point(4, 35);
             this.itemlocation.Name = "itemlocation";
             this.itemlocation.Size = new System.Drawing.Size(67, 13);
             this.itemlocation.TabIndex = 2;
@@ -139,9 +140,10 @@ namespace csrLogViewer
             this.Controls.Add(this.wherebtn);
             this.Controls.Add(this.itemlocation);
             this.Controls.Add(this.liofit);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "whereis";
-            this.Text = "csLogViewer: Where is?";
+            this.Text = "csrLogViewer: Where is?";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.whereis_FormClosing);
             this.Load += new System.EventHandler(this.whereis_Load);
             this.ResumeLayout(false);

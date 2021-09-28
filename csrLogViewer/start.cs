@@ -15,6 +15,7 @@ namespace csrLogViewer
 
         public static string path2log = "";
         public static string logseed = "";
+        public static string logsettings = "";
 
         whereis _whereis = new whereis();
         whatis _whatis = new whatis();
@@ -45,25 +46,33 @@ namespace csrLogViewer
 
         public void kiisseli(string logtxt)
         {
+            if (logtxt.EndsWith("log.txt"))
+            {
+                string[] loglines = File.ReadAllLines(logtxt);
 
-            string[] loglines = File.ReadAllLines(logtxt);
+                String seeds = loglines[2];
+                string[] logsettings2 = loglines[1].Split(':');
 
-            String seeds = loglines[2];
+                int sFrom = seeds.IndexOf("NOTICE: Offering seed \"") + "NOTICE: Offering seed \"".Length;
+                int sTo = seeds.LastIndexOf("\" to RNGesus");
 
-            int sFrom = seeds.IndexOf("NOTICE: Offering seed \"") + "NOTICE: Offering seed \"".Length;
-            int sTo = seeds.LastIndexOf("\" to RNGesus");
+                logseed = seeds.Substring(sFrom, sTo - sFrom);
+                logsettings = logsettings2[2];
 
-            logseed = seeds.Substring(sFrom, sTo - sFrom);
+                path2log = logtxt.ToString();
 
-            path2log = logtxt.ToString();
+                logpath.Text = path2log;
 
-            logpath.Text = path2log;
+                seedseed.Text = "Seed: " + logseed;
+                seedsettings.Text = "Settings: " + logsettings;
 
-            seed.Text = "Seed: " + logseed;
-
-            whereis.Enabled = true;
-            whatis.Enabled = true;
-            isxy.Enabled = true;
+                whereis.Enabled = true;
+                whatis.Enabled = true;
+                isxy.Enabled = true;
+            } else
+            {
+                MessageBox.Show("Please select the \"log.txt\" file.", "Wrong file");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,9 +95,19 @@ namespace csrLogViewer
 
         private void start_Load(object sender, EventArgs e)
         {
-            whereis.Enabled = false;
-            whatis.Enabled = false;
-            isxy.Enabled = false;
+            if (path2log.Length > 0)
+            {
+                logpath.Text = path2log;
+                kiisseli(path2log);
+                whereis.Enabled = true;
+                whatis.Enabled = true;
+                isxy.Enabled = true;
+            } else
+            {
+                whereis.Enabled = false;
+                whatis.Enabled = false;
+                isxy.Enabled = false;
+            }
 
         }
 
