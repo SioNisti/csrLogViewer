@@ -3,7 +3,7 @@ spoiler log viewer for the [cave story randomizer](https://github.com/cave-story
 
 Allows you to easily check what item is where or just check if item X is in check Y without having to open the actual log file and accidentally seeing where something else is.
 
-[[download]: https://siontea.com/img/random/logo_old.png](https://github.com/SioNisti/csrLogViewer/releases)
+[![Foo](https://cdn.discordapp.com/attachments/612660201497296916/892354444199620648/downloadbtn.png)](https://github.com/SioNisti/csrLogViewer/releases)
 
 # Features
 -Browse directories for log.txt
