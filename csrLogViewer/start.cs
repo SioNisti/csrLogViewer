@@ -17,8 +17,8 @@ namespace csrLogViewer
         public static string logseed = "";
 
         whereis _whereis = new whereis();
-        //whereis _whereis = new whereis();
-        //whereis _whereis = new whereis();
+        whatis _whatis = new whatis();
+        isxy _isxy = new isxy();
 
         private void dirbtn_Click(object sender, EventArgs e)
         {
@@ -26,24 +26,44 @@ namespace csrLogViewer
             dialog.IsFolderPicker = false;
             if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                path2log = dialog.FileName;
-                logpath.Text = dialog.FileName;
-
-                string[] loglines = File.ReadAllLines(path2log);
-
-                String seeds = loglines[2];
-
-                int sFrom = seeds.IndexOf("NOTICE: Offering seed \"") + "NOTICE: Offering seed \"".Length;
-                int sTo = seeds.LastIndexOf("\" to RNGesus");
-
-                logseed = seeds.Substring(sFrom, sTo - sFrom);
-
-                seed.Text = "Seed: "+ logseed;
-
-                whereis.Enabled = true;
-                whatis.Enabled = true;
-                isxy.Enabled = true;
+                kiisseli(dialog.FileName);
             }
+        }
+
+        private void start_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] fileList = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+            kiisseli(fileList[0]);
+        }
+        private void logpath_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                kiisseli(logpath.Text);
+            }
+        }
+
+        public void kiisseli(string logtxt)
+        {
+
+            string[] loglines = File.ReadAllLines(logtxt);
+
+            String seeds = loglines[2];
+
+            int sFrom = seeds.IndexOf("NOTICE: Offering seed \"") + "NOTICE: Offering seed \"".Length;
+            int sTo = seeds.LastIndexOf("\" to RNGesus");
+
+            logseed = seeds.Substring(sFrom, sTo - sFrom);
+
+            path2log = logtxt.ToString();
+
+            logpath.Text = path2log;
+
+            seed.Text = "Seed: " + logseed;
+
+            whereis.Enabled = true;
+            whatis.Enabled = true;
+            isxy.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,12 +74,14 @@ namespace csrLogViewer
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            _whatis.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            _isxy.Show();
         }
 
         private void start_Load(object sender, EventArgs e)
@@ -67,29 +89,18 @@ namespace csrLogViewer
             whereis.Enabled = false;
             whatis.Enabled = false;
             isxy.Enabled = false;
-            
+
         }
 
-        private void logpath_KeyUp(object sender, KeyEventArgs e)
+        private void start_DragEnter(object sender, DragEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
-                string[] loglines = File.ReadAllLines(logpath.Text);
-
-                String seeds = loglines[2];
-
-                int sFrom = seeds.IndexOf("NOTICE: Offering seed \"") + "NOTICE: Offering seed \"".Length;
-                int sTo = seeds.LastIndexOf("\" to RNGesus");
-
-                logseed = seeds.Substring(sFrom, sTo - sFrom);
-
-                path2log = logpath.Text;
-
-                seed.Text = "Seed: " + logseed;
-
-                whereis.Enabled = true;
-                whatis.Enabled = true;
-                isxy.Enabled = true;
+                e.Effect = DragDropEffects.Copy;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
             }
         }
     }

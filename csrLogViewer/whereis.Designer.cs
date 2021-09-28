@@ -107,7 +107,7 @@ namespace csrLogViewer
             "Life Capsule 10",
             "Life Capsule 11",
             "Life Capsule 12"});
-            this.liofit.Location = new System.Drawing.Point(93, 8);
+            this.liofit.Location = new System.Drawing.Point(93, 13);
             this.liofit.Name = "liofit";
             this.liofit.Size = new System.Drawing.Size(186, 21);
             this.liofit.TabIndex = 0;
@@ -123,7 +123,7 @@ namespace csrLogViewer
             // 
             // wherebtn
             // 
-            this.wherebtn.Location = new System.Drawing.Point(12, 8);
+            this.wherebtn.Location = new System.Drawing.Point(12, 12);
             this.wherebtn.Name = "wherebtn";
             this.wherebtn.Size = new System.Drawing.Size(75, 21);
             this.wherebtn.TabIndex = 3;

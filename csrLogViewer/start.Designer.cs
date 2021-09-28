@@ -35,7 +35,6 @@ namespace csrLogViewer
             this.dirbtn = new System.Windows.Forms.Button();
             this.logpath = new System.Windows.Forms.TextBox();
             this.seed = new System.Windows.Forms.Label();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
@@ -95,12 +94,9 @@ namespace csrLogViewer
             this.seed.Size = new System.Drawing.Size(0, 13);
             this.seed.TabIndex = 5;
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // start
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 86);
@@ -113,6 +109,8 @@ namespace csrLogViewer
             this.Name = "start";
             this.Text = "csLogViewer";
             this.Load += new System.EventHandler(this.start_Load);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.start_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.start_DragEnter);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,7 +124,6 @@ namespace csrLogViewer
         private System.Windows.Forms.Button dirbtn;
         private System.Windows.Forms.TextBox logpath;
         private System.Windows.Forms.Label seed;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }
