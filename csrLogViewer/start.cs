@@ -1,7 +1,5 @@
 ﻿using System;
-using Microsoft.WindowsAPICodePack.Dialogs;
 using System.Windows.Forms;
-using Directory = System.IO.Directory;
 using System.IO;
 using System.Diagnostics;
 
@@ -24,9 +22,8 @@ namespace csrLogViewer
 
         private void dirbtn_Click(object sender, EventArgs e)
         {
-            CommonOpenFileDialog dialog = new CommonOpenFileDialog();
-            dialog.IsFolderPicker = false;
-            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            OpenFileDialog dialog = new OpenFileDialog();
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
                 kiisseli(dialog.FileName);
             }
