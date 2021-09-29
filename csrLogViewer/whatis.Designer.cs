@@ -158,7 +158,9 @@ namespace csrLogViewer
             this.Controls.Add(this.lioflo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "whatis";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "csrLogViewer: What is?";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.whatis_FormClosing);
             this.Load += new System.EventHandler(this.whatis_Load);

@@ -62,6 +62,8 @@ namespace csrLogViewer
         private void isxy_FormClosing(object sender, FormClosingEventArgs e)
         {
             start start = new start();
+            start.StartPosition = FormStartPosition.Manual;
+            start.Location = this.Location;
             start.Show();
         }
     }

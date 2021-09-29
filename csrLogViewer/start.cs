@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using System.Drawing;
 
 namespace csrLogViewer
 {
@@ -15,6 +16,8 @@ namespace csrLogViewer
         public static string path2log = "";
         public static string logseed = "";
         public static string logsettings = "";
+
+        public static string wlocation;
 
         whereis _whereis = new whereis();
         whatis _whatis = new whatis();
@@ -76,18 +79,24 @@ namespace csrLogViewer
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
+            _whereis.StartPosition = FormStartPosition.Manual;
+            _whereis.Location = this.Location;
             _whereis.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
+            _whatis.StartPosition = FormStartPosition.Manual;
+            _whatis.Location = this.Location;
             _whatis.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
+            _isxy.StartPosition = FormStartPosition.Manual;
+            _isxy.Location = this.Location;
             _isxy.Show();
         }
 

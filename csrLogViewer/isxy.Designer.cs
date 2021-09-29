@@ -222,7 +222,9 @@ namespace csrLogViewer
             this.Controls.Add(this.lioflo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "isxy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "csrLogViewer: Is X Y?";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.isxy_FormClosing);
             this.ResumeLayout(false);

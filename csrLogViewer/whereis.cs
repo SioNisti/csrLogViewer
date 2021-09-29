@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -163,6 +164,8 @@ namespace csrLogViewer
         private void whereis_FormClosing(object sender, FormClosingEventArgs e)
         {
             start start = new start();
+            start.StartPosition = FormStartPosition.Manual;
+            start.Location = this.Location;
             start.Show();
         }
     }

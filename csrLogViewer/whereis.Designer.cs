@@ -144,6 +144,7 @@ namespace csrLogViewer
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "whereis";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "csrLogViewer: Where is?";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.whereis_FormClosing);
             this.Load += new System.EventHandler(this.whereis_Load);
