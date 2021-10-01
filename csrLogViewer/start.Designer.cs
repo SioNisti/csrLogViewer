@@ -123,7 +123,7 @@ namespace csrLogViewer
             this.MaximizeBox = false;
             this.Name = "start";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "csrLogViewer 0.8.0.2";
+            this.Text = "csrLogViewer 0.8.0.3";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.start_FormClosing);
             this.Load += new System.EventHandler(this.start_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.start_DragDrop);
