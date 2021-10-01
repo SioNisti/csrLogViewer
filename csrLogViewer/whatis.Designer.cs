@@ -67,7 +67,7 @@ namespace csrLogViewer
             "Reservoir",
             "Yamashita Farm",
             "Arthur\'s Grave",
-            "Assembly Hall",
+            "Assembly Hall Fireplace",
             "Storage? Chest",
             "Mr. Little (Graveyard)",
             "Ma Pignon Boss",
